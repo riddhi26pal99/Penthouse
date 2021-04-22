@@ -1,0 +1,3 @@
+.sideBar{
+    @apply flex h-screen w-96 bg-gray-100;
+}
