@@ -258,6 +258,7 @@ module.exports = {
 			DEFAULT: '1',
 		},
 		fontFamily: {
+			poppins: ['Poppins', 'sans-serif'],
 			sans: [
 				'ui-sans-serif',
 				'system-ui',
