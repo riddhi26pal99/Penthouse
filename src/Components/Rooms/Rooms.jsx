@@ -1,10 +1,12 @@
 import React from 'react'
+import RoomHeader from './RoomHeader/RoomHeader'
+import './Rooms.css'
 
 function Rooms() {
     return (
-        <div>
+        <container className="Rooms">
             
-        </div>
+        </container>
     )
 }
 
