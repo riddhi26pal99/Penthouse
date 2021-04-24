@@ -1,3 +1,19 @@
 .sideBar{
-    @apply flex h-screen w-96 bg-gray-100;
+    @apply flex relative flex-col h-screen w-96 bg-gray-100;
+}
+
+.yourContact {
+     @apply text-gray-900 text-2xl mt-6 p-4 font-semibold;
+}
+
+.arrow {
+    @apply ml-2 text-gray-800;
+}
+
+.sideBar > Button {
+    @apply bg-blue-500 text-xl shadow-xl absolute bottom-8 font-semibold flex py-4 mt-4 px-16 max-w-max place-self-center text-center h-auto rounded text-white ;
+}
+
+.contactList {
+    @apply h-3/5 p-4 w-auto overflow-y-scroll;
 }
