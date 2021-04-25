@@ -1,11 +1,14 @@
 import React from 'react'
-//import Rooms from '../Components/Rooms/Rooms'
+import Rooms from '../Components/Rooms/Rooms'
 import SideBar from '../Components/Sidebar/SideBar'
 
 function home() {
     return (
-        <div class="flex-row">
-           <SideBar />
+        <div class="flex flex-row">
+
+            <SideBar />
+            <Rooms />
+
         </div>
     )
 }

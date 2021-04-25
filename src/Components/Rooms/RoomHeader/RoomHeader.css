@@ -1,0 +1,35 @@
+.roomHeader{
+    @apply px-4 h-28 w-screen relative justify-between items-center shadow flex;
+}
+
+.userContainer {
+    @apply flex relative bg-transparent flex-row;
+}
+
+.userContainer > img {
+    @apply rounded-full object-cover w-16 h-16 mr-2 shadow justify-items-center;
+}
+
+.userContainer > span {
+    @apply bg-purple-400 absolute top-10 left-0 rounded-full w-auto h-auto text-white font-semibold;
+}
+
+.userInfo {
+    @apply flex bg-transparent space-x-0.5 flex-col p-1 w-auto ;
+}
+
+.userInfo >h1 {
+    @apply font-semibold text-lg text-gray-800;
+}
+
+.userInfo > p {
+    @apply font-normal text-base mt-0 p-0 text-gray-800;
+}
+
+.aboutDev {
+    @apply bg-transparent flex items-end text-lg rounded-lg py-2 px-6 border-4 w-auto h-auto border-purple-500 text-purple-500 font-medium;
+}
+
+.logOut {
+    @apply bg-purple-500 py-3 ml-8 w-auto h-auto px-16 text-white font-medium flex items-end text-lg rounded-lg;
+}
