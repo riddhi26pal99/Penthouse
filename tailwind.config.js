@@ -82,6 +82,8 @@ module.exports = {
 		backdropSepia: (theme) => theme('sepia'),
 		backgroundColor: (theme) => theme('colors'),
 		backgroundImage: {
+			pattern: "url('/src/assets/images/bg.svg')",
+			login: "url('/src/assets/images/login.svg')",
 			none: 'none',
 			'gradient-to-t':
 				'linear-gradient(to top, var(--tw-gradient-stops))',
@@ -258,6 +260,7 @@ module.exports = {
 			DEFAULT: '1',
 		},
 		fontFamily: {
+			poppins: ['Poppins', 'sans-serif'],
 			sans: [
 				'ui-sans-serif',
 				'system-ui',
