@@ -5,7 +5,7 @@ import './Rooms.css'
 function Rooms() {
     return (
         <container className="Rooms">
-            
+
         </container>
     )
 }
