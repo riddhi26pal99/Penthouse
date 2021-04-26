@@ -1,18 +1,50 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import './App.css';
 
-import { useAuthState } from 'react-firebase-hooks/auth';
-import { auth } from './firebase';
+import { auth, db } from './firebase';
+
+import { useDispatch } from 'react-redux';
+import { login, selectUser, logout } from './features/userSlice';
+import { useSelector } from 'react-redux';
+
+import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
 
 import Home from './Pages/Home';
 import OurTeam from './Pages/OurTeam';
 import Error from './Pages/Error';
 import Login from './Pages/Login';
 
-import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
-
 function App() {
-	const [user, loading] = useAuthState(auth);
+	const dispatch = useDispatch();
+	const user = useSelector(selectUser);
+
+	useEffect(() => {
+		auth.onAuthStateChanged(async (authUser) => {
+			if (authUser) {
+				let user;
+				await db
+					.doc(`/users/${authUser.uid}`)
+					.get()
+					.then((doc) => {
+						if (!doc.exists) {
+							user = {
+								username: authUser.displayName,
+								image: authUser.photoURL,
+								email: authUser.email,
+								bio: `Hey, I am ${authUser.displayName}`,
+							};
+						} else {
+							user = doc.data();
+						}
+					})
+					.then((_) => {
+						dispatch(login(user));
+					});
+			} else {
+				dispatch(logout());
+			}
+		});
+	}, [dispatch]);
 
 	return (
 		<div className='App'>

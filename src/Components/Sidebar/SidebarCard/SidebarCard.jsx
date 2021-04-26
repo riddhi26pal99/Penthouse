@@ -11,14 +11,14 @@ function SidebarCard() {
             <div className="contactCard">
             
                 <img src={image} alt= "" className="contactImage" />
-                <div class= "ContactInfo">
+                <div className= "ContactInfo">
                     <p>Jessica James</p>
                     <h4>Status</h4>
                 </div>
                 <VideocamIcon className="camCord"/>
             </div>
 
-            <div class="custom-underline"></div>
+            <div className="custom-underline"></div>
 
         </React.Fragment>
         

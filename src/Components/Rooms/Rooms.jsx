@@ -4,9 +4,9 @@ import './Rooms.css'
 
 function Rooms() {
     return (
-        <container className="Rooms">
+        <div className="Rooms">
             <RoomHeader />
-        </container>
+        </div>
     )
 }
 
