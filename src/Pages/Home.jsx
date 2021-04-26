@@ -1,12 +1,13 @@
 import React from 'react'
+
 import Rooms from '../Components/Rooms/Rooms'
 import SideBar from '../Components/Sidebar/SideBar'
-import { auth } from '../firebase'
 
-function home() {
+function Home() {
+    
+
     return (
-        <div class="flex flex-row">
-            <button onClick={() => auth.signOut()}>Logout</button>
+        <div className="flex flex-row">
             <SideBar />
             <Rooms />
 
@@ -14,4 +15,4 @@ function home() {
     )
 }
 
-export default home
+export default Home

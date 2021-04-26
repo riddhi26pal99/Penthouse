@@ -4,28 +4,24 @@ import { auth, provider, db } from '../firebase';
 import {ReactComponent as LoginSvg} from '../assets/images/login.svg';
 import { FaGoogle } from "react-icons/fa";
 
+
 function Login() {
     const signIn = e => {
         e.preventDefault();
         auth.signInWithPopup(provider).then( async (result) => {
-            const user = {
-                username: result.user.displayName,
-                image: result.user.photoURL,
-                email: result.user.email,          
-                uid : result.user.uid,   
-            }
-
+            const user = result.user;
             const userExists = await db.doc(`/users/${user.uid}`).get();
 
             if (!userExists.exists) {
                 await db.doc(`users/${user.uid}`).set({
-                    username: user.username,
-                    image: user.image,
+                    username: user.displayName,
+                    image: user.photoURL,
                     email: user.email,
+                    bio: `Hey, I am ${user.displayName}`,
                 }).catch(err => {
                     console.log(err);
                 });
-            } 
+            }
 
         }).catch((error) => {
             alert(error.message);
