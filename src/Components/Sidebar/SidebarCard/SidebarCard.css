@@ -1,0 +1,23 @@
+.contactCard{
+    @apply h-auto w-auto flex relative m-4 mb-2 justify-items-center items-center mt-3 bg-transparent space-y-2;
+}
+
+.contactImage {
+    @apply rounded-full shadow h-16 w-16 object-cover;
+}
+
+.ContactInfo > p {
+    @apply text-xl text-gray-900 font-bold ml-4;
+}
+
+.ContactInfo > h4 {
+    @apply text-lg text-gray-800 font-semibold mt-0 ml-4;
+}
+
+.camCord {
+    @apply absolute right-4 items-center text-gray-700;
+}
+
+.custom-underline {
+    @apply flex bg-gray-400 items-center self-center ml-16 m-0 p-0 w-64 h-px;
+}
