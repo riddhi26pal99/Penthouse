@@ -2,7 +2,7 @@ import React from 'react'
 import RoomHeader from './RoomHeader/RoomHeader'
 import './Rooms.css'
 
-function Rooms() {
+function Rooms({ setShowRoomModal }) {
     return (
         <div className="Rooms">
             <RoomHeader />
