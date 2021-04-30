@@ -7,23 +7,19 @@
 }
 
 .login-left {
-	@apply bg-green-100 md:w-7/12 lg:w-2/3 px-4 py-8 rounded-l-lg;
+	@apply bg-green-100 md:w-2/3 px-4 py-8 rounded-l-lg;
 }
 
 .login-left > h1 {
-	@apply font-bold text-4xl;
+	@apply font-bold text-2xl;
 }
 
 .login-left > h3 {
 	@apply font-semibold text-xl mb-12;
 }
 
-.login-desktop-svg {
-	@apply w-full md:hidden lg:flex justify-center items-center;
-}
-
-.login-desktop-svg > svg {
-	@apply object-contain shadow-xl;
+.login-left > svg {
+	@apply w-full object-contain mx-auto filter drop-shadow-xl;
 }
 
 .login-right {
@@ -35,11 +31,7 @@
 }
 
 .login-button {
-	@apply bg-blue-500 flex items-center px-8 py-4 rounded-md text-xl text-white font-semibold duration-300 ease-in-out focus:outline-none;
-}
-
-.login-button:hover {
-	@apply bg-blue-600;
+	@apply bg-blue-500 flex items-center px-8 py-4 rounded-md text-lg text-white font-semibold duration-300 ease-in-out focus:outline-none hover:bg-blue-600;
 }
 
 .login-button > svg {

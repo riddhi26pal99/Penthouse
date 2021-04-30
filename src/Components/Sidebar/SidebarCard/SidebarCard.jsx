@@ -9,16 +9,16 @@ function SidebarCard() {
 
         <React.Fragment>
             <div className="contactCard">
-            
-                <img src={image} alt= "" className="contactImage" />
-                <div className= "ContactInfo">
-                    <p>Jessica James</p>
-                    <h4>Status</h4>
+                <div className="contact">
+                    <img src={image} alt= "" className="contactImage" />
+                    <div className= "ContactInfo">
+                        <p>Jessica James</p>
+                    </div>
                 </div>
                 <VideocamIcon className="camCord"/>
             </div>
-
-            <div className="custom-underline"></div>
+            <hr />
+            {/* <div className="custom-underline"></div> */}
 
         </React.Fragment>
         

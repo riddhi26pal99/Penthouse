@@ -1,23 +1,23 @@
-.contactCard{
-    @apply h-auto w-auto flex relative m-4 mb-2 justify-items-center items-center mt-3 bg-transparent space-y-2;
+.contactCard {
+	@apply h-auto md:w-64 lg:w-full flex relative m-4 mb-2 justify-between items-center mt-3 bg-transparent;
+}
+
+.contact {
+	@apply flex items-center justify-between;
 }
 
 .contactImage {
-    @apply rounded-full shadow h-16 w-16 object-cover;
+	@apply rounded-full h-12 w-12 object-cover;
 }
 
 .ContactInfo > p {
-    @apply text-xl text-gray-900 font-bold ml-4;
-}
-
-.ContactInfo > h4 {
-    @apply text-lg text-gray-800 font-semibold mt-0 ml-4;
+	@apply text-lg text-gray-900 font-medium ml-3;
 }
 
 .camCord {
-    @apply absolute right-4 items-center text-gray-700;
+	@apply absolute md:right-0 lg:right-8 cursor-pointer items-center text-gray-700 opacity-60 hover:opacity-100 duration-150;
 }
 
-.custom-underline {
-    @apply flex bg-gray-400 items-center self-center ml-16 m-0 p-0 w-64 h-px;
+hr {
+	@apply border border-gray-200 mb-3;
 }

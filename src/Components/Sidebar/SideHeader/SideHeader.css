@@ -1,11 +1,11 @@
-.sideHeader{
-    @apply m-2 p-2 justify-items-center text-gray-800;
+.sideHeader {
+	@apply m-2 p-2 justify-items-center text-gray-800;
 }
 
-.sideHeader >h1 {
-    @apply text-4xl font-bold;
+.sideHeader > h1 {
+	@apply text-2xl font-bold;
 }
 
 .sideHeader > h2 {
-    @apply text-2xl font-semibold mt-0.5;
+	@apply text-lg font-semibold;
 }

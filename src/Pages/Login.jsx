@@ -34,9 +34,7 @@ function Login() {
                 <div className="login-left">
                     <h1>PENTHOUSE.</h1>
                     <h3>Drop In Video Chat</h3>
-                    <div className="login-desktop-svg">
-                        <LoginSvg />
-                    </div>
+                    <LoginSvg />
                 </div>
                 <div className="login-right">
                     <h2>Login for free <strong>NOW</strong> to be part of our exclusive fam.</h2>
