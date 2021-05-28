@@ -1,8 +1,12 @@
 import { IconButton } from '@material-ui/core';
 import React, { useState } from 'react'
 import { IoMdCloseCircle } from 'react-icons/io';
+import RoomCard from './RoomCard/RoomCard';
+import FiberManualRecordIcon from '@material-ui/icons/FiberManualRecord'
 import RoomHeader from './RoomHeader/RoomHeader'
 import './Rooms.css'
+import { db } from '../../firebase'
+
 
 const CreateRoomModal = ({ setShowRoomModal }) => {
     const [roomName, setRoomName] = useState('');
@@ -19,6 +23,14 @@ const CreateRoomModal = ({ setShowRoomModal }) => {
     const handleFormSubmit = e => {
         e.preventDefault();
         console.log(roomName, participants, coverColor);
+
+        db.collection("Rooms").add(
+            {
+                roomName: roomName,
+                participants: participants,
+                coverColor: coverColor
+            }
+        )
     }
 
     const selectColor = e => {
@@ -77,14 +89,21 @@ const CreateRoomModal = ({ setShowRoomModal }) => {
 function Rooms() {
     const [showRoomModal, setShowRoomModal] = useState(false);
 
-    
-
     return (
-        <div className="Rooms">
+         <div className="Rooms">
             <RoomHeader />
+            <div className="activeStatus">
+               <p>
+                <FiberManualRecordIcon />
+               </p> 
+                <h1>Active Rooms</h1>
+            </div>
+            <RoomCard />
             {showRoomModal ? <CreateRoomModal setShowRoomModal={setShowRoomModal} /> : (
                 // TODO -> SHOW ROOM CARDS
-                <button className='new-room' onClick={() => setShowRoomModal(true)}>Create New Room</button>
+                <div class="flex justify-center">
+                    <button className='new-room' onClick={() => setShowRoomModal(true)}>Create New Room</button>
+                </div>
             )}
         </div>
     )
